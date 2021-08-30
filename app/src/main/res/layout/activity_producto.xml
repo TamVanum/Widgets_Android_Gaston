@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="OpenHome"
+    tools:context=".Producto_act">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="145dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pera" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="297dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="28dp"
+        android:onClick="OpenHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <RadioButton
+            android:id="@+id/rdbCalc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular 1 kilo"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rdbCalc2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular 2 kilos"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="308dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Calcular"
+            android:text="Calcular" />
+
+        <Button
+            android:id="@+id/btnCVolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="OpenHome"
+            android:text="Volver" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblCalc"
+        android:layout_width="228dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
